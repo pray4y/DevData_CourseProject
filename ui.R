@@ -26,6 +26,8 @@ shinyUI(pageWithSidebar(
         ),
         mainPanel(
                 h3('Your "GET 24!" equation:'),
+                p("You may need to wait a few seconds for the game to respond 
+                        properly after each new selection."),
                 verbatimTextOutput("t_main"),
                 h4("Game Instructions:"),
                 p("Select a card from the dropdown list for each of the four suits 
@@ -34,7 +36,7 @@ shinyUI(pageWithSidebar(
                         code("A"), code("2"), code("3"), code("4"), code("5"), 
                         code("6"), code("7"), code("8"), code("9"), code("10"), 
                         code("J"), code("Q"), code("K"), ". 
-                        Here we map A to 1, J to 11, Q to 12, and K to 13, 
+                        Here A is mapped A to 1, J to 11, Q to 12, and K to 13, 
                         so each suit can represent integers from 1 to 13. "),
                 p('After the player selects a card from each suit, "GET 24!" will 
                         calculate whether the numbers represented by all four 

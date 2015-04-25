@@ -36,10 +36,6 @@ get24 <- function(card1, card2, card3, card4) {
         int2 <- grep(card2, card)[1]
         int3 <- grep(card3, card)[1]
         int4 <- grep(card4, card)[1]
-#        int1 <- grep(strsplit(card1, " ")[[1]][1], card)
-#        int2 <- grep(strsplit(card2, " ")[[1]][1], card)
-#        int3 <- grep(strsplit(card3, " ")[[1]][1], card)
-#        int4 <- grep(strsplit(card4, " ")[[1]][1], card)
         
         if (int1 == 14 | int2 == 14 | int3 == 14 | int4 == 14) {
                 select24 <- "Please select a card from each suit."

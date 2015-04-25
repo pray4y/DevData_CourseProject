@@ -28,8 +28,8 @@ shinyUI(pageWithSidebar(
         ),
         mainPanel(
                 h3('Your "GET 24!" equation:'),
-                p("You may need to wait a few seconds for the game to respond 
-                        properly after each new selection."),
+                p("After after each new selection, you may need to wait a few seconds 
+                        for the game to respond properly."),
                 # when a result of 24 is reached, game will print a full expression 
                 # of equation
                 verbatimTextOutput("t_main"),

@@ -34,8 +34,8 @@ op <- function(operand1, operator, operand2) {
 get24 <- function(card1, card2, card3, card4) {
         sign <- c("+", "-", "*", "/")
         where24 <- 0
-        select24 <- "You cannot get 24 using these four numbers. Please change 
-                your selection."
+        select24 <- paste("You cannot get 24 using these numbers.", 
+                "Please modify your choices.")
         card <- c("A = 1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J = 11", 
                 "Q = 12", "K = 13", "none")
         
@@ -217,7 +217,6 @@ get24 <- function(card1, card2, card3, card4) {
         return(select24)
 }
 
-library(shiny)
 shinyServer(
         function(input, output) {
                 # output of a full expression of equation with a result of 24

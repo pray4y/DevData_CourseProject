@@ -47,7 +47,7 @@ get24 <- function(card1, card2, card3, card4) {
         
         # begin calculations when all four input values are given
         if (int1 == 14 | int2 == 14 | int3 == 14 | int4 == 14) {
-                select24 <- "Please select a card from each suit."
+                select24 <- 'Please select a card from each suit and click "Calculate".'
         } else {
                 num <- c(int1, int2, int3, int4)
                 
@@ -221,7 +221,9 @@ shinyServer(
         function(input, output) {
                 # output of a full expression of equation with a result of 24
                 output$t_main <- renderText({
-                        get24(input$spade, input$heart, input$club, input$diamond)
+                        # result will only show when button is clicked
+                        input$goButton
+                        isolate(get24(input$spade, input$heart, input$club, input$diamond))
                 })
         }
 )

@@ -1,6 +1,8 @@
 shinyUI(pageWithSidebar(
         headerPanel('"GET 24!" The Game'),
         sidebarPanel(
+                # select a card value from the dropdown list
+                # default value is "none"
                 selectInput("spade", 
                         label = "Choose your spade card:",
                         choices = c("A = 1", "2", "3", "4", "5", "6", "7", "8", 
@@ -28,6 +30,8 @@ shinyUI(pageWithSidebar(
                 h3('Your "GET 24!" equation:'),
                 p("You may need to wait a few seconds for the game to respond 
                         properly after each new selection."),
+                # when a result of 24 is reached, game will print a full expression 
+                # of equation
                 verbatimTextOutput("t_main"),
                 h4("Game Instructions:"),
                 p("Select a card from the dropdown list for each of the four suits 

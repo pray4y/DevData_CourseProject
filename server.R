@@ -32,10 +32,10 @@ get24 <- function(card1, card2, card3, card4) {
         select24 <- "You cannot get 24 using these four numbers. Please change your selection."
         card <- c("A = 1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J = 11", "Q = 12", "K = 13", "none")
 
-        int1 <- grep(card1, card)
-        int2 <- grep(card2, card)
-        int3 <- grep(card3, card)
-        int4 <- grep(card4, card)
+        int1 <- grep(card1, card)[1]
+        int2 <- grep(card2, card)[1]
+        int3 <- grep(card3, card)[1]
+        int4 <- grep(card4, card)[1]
 #        int1 <- grep(strsplit(card1, " ")[[1]][1], card)
 #        int2 <- grep(strsplit(card2, " ")[[1]][1], card)
 #        int3 <- grep(strsplit(card3, " ")[[1]][1], card)
